@@ -5,5 +5,5 @@ This is a Xamarin.Forms sample program demonstrating Command-Prompt-Like-UI simi
 * English:  
 * Japanese:  
 
-Keywords: Xamarin.Forms, ScrollView, borderline of Entry, Padding, FormattedText, Span, Editor, ListView, ScrollToAsync, Completed event, TextChanged event, Focus
+[Keywords] Xamarin.Forms, ScrollView, borderline of Entry, Padding, FormattedText, Span, Editor, ListView, ScrollToAsync, Completed event, TextChanged event, Focus
 
