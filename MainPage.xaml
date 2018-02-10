@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CommandPrompt"
+             x:Class="CommandPrompt.MainPage">
+
+    <StackLayout Margin="5, 30, 5, 50">
+
+        <!-- App Title -->
+        <StackLayout BackgroundColor="Gray" Padding="0,0,0,1">
+            <Label Text="Command Prompt Demo:" BackgroundColor="White" />
+        </StackLayout>
+
+        <!-- Buttons for Debug -->
+        <StackLayout BackgroundColor="Gray" Padding="0,0,0,1" >
+            <StackLayout Orientation="Horizontal" BackgroundColor="White" Padding="0,0,0,2">
+                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Start" 
+                        FontSize="12" TextColor="Blue" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Debug"/>
+                            <Span Text="{x:Static x:Environment.NewLine}" />
+                            <Span Text="Buttons"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button Text="Button1" Clicked="Button1" 
+                    WidthRequest="80" HeightRequest="30" Margin="3,3,0,3"
+                    BorderColor="Blue" BorderWidth="1" />
+                <Button Text="Button2" Clicked="Button2" 
+                    WidthRequest="80" HeightRequest="30" Margin="3,3,0,3" 
+                    BorderColor="Blue" BorderWidth="1" />
+                <Button Text="Button3" Clicked="Button3" 
+                    WidthRequest="80" HeightRequest="30" Margin="3,3,0,3" 
+                    BorderColor="Blue" BorderWidth="1" />                
+            </StackLayout>
+        </StackLayout>        
+
+        <!-- Command Prompt Console Area -->
+        <StackLayout BackgroundColor="Gray" Padding="1" VerticalOptions="FillAndExpand">
+            <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand" >
+                <Label Text="Command Prompt Console" TextColor="White" FontSize="13" 
+                       BackgroundColor="Gray" />
+                <ScrollView x:Name="scrollView" >
+                    <StackLayout x:Name="Console" Spacing="0" />
+                </ScrollView>
+            </StackLayout>
+        </StackLayout>
+
+        <!-- Data Display Area for Debug -->
+        <StackLayout BackgroundColor="Gray" Padding="1" Orientation="Horizontal" 
+                     HeightRequest="100" VerticalOptions="End" Spacing="1" >
+            <StackLayout BackgroundColor="White" >
+                <StackLayout.WidthRequest>
+                    <OnPlatform x:TypeArguments="x:Double" iOS="120" WinPhone="180" />
+                </StackLayout.WidthRequest>
+                <Label Text="Debug ScrollView" TextColor="Blue" FontSize="12" />
+                <ScrollView x:Name="debugScrollView" >
+                    <StackLayout x:Name="debugResultList" Spacing="0" />
+                </ScrollView>
+            </StackLayout>
+            <StackLayout BackgroundColor="White" WidthRequest="10" HorizontalOptions="FillAndExpand" >
+                <Label Text="Debug Labels" TextColor="Blue" FontSize="12" />
+                <Label x:Name="Label1" Text=" " FontSize="15" />
+                <Label x:Name="Label2" Text=" " FontSize="15" />
+                <Label x:Name="Label3" Text=" " FontSize="15" />
+            </StackLayout>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>
+
+
+
+                <!--
+                <Editor x:Name="resultList" BackgroundColor="White" VerticalOptions="FillAndExpand" />
+
+                -->
+                <!--
+                <ListView x:Name="resultList" WidthRequest="80" />
+                -->
+<!--
+            <Editor x:Name="Console" TextChanged="ConsoleChanged"
+                    BackgroundColor="White" VerticalOptions="FillAndExpand" />  -->
+<!--
+
+               <ListView x:Name="resultList" WidthRequest="80" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding resultLine, Mode=TwoWay}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+
+     <Editor x:Name="Editor1" VerticalOptions="FillAndExpand"/>
+    
+    
+    -->
